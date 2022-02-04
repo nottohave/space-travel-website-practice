@@ -119,19 +119,30 @@
 
                 </div>
                 
-                <div style="margin-bottom: 50vh">
+                <div class="flow" style="margin-bottom: 50vh; --flow-space: 5rem">
                     <!-- Tabs -->
-                    <div class="">
-                        <button>Moon</button>
-                        <button>Mars</button>
-                        <button>Europa</button>
+                    <div class="tab-list underline-indicators flex">
+                        <button aria-selected="true" class="uppercase ff-sans-cond text-accent bg-dark letter-spacing-2">Mars</button>
+                        <button aria-selected="false" class="uppercase ff-sans-cond text-accent bg-dark letter-spacing-2">Moon</button>
+                        <button aria-selected="false" class="uppercase ff-sans-cond text-accent bg-dark letter-spacing-2">Europa</button>
 
                     </div>
                     
                     <!-- Dots -->
-                    
+                    <!-- The three buttons -->
+                    <div class="dot-indicators flex">
+                        <button aria-selected="true"><span class="sr-only">Slide title</span> </button>
+                        <button aria-selected="false"><span class="sr-only">Slide title</span> </button>
+                        <button aria-selected="false"><span class="sr-only">Slide title</span> </button>
+
+                    </div>
                     
                     <!-- Numbers -->
+                    <div class="number-indicators flex" style="height: 15rem; width: 15rem; flex-direction: column; justify-content: center; align-items: center;">
+                        <button aria-selected="true" class="ff-serif text-dark bg-white">1</button>
+                        <button aria-selected="false" class="ff-serif text-white bg-white">2</button>
+                        <button aria-selected="false" class="ff-serif text-white bg-white">3</button>
+                    </div>
                 </div>
             </div>
             
