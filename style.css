@@ -129,6 +129,7 @@ select {
     gap: var(--gap, 1rem);
 }
 
+
 .grid {
     display: grid;
     gap: var(--gap, 1rem);
@@ -140,13 +141,27 @@ select {
     max-width: 80rem;
 }
 
+.d-block {
+    display: block;
+}
+
 .grid-container {
+    text-align: center;
     outline: 5px solid limegreen;
     display: grid;
+    place-items: center;
+    padding-inline: 1rem;
+    row-gap: 10%;
+}
+
+/* set max character so p wont be too runny */
+.grid-container * {
+    max-width: 50ch;
 }
 
 @media (min-width: 45em) {
     .grid-container {
+        text-align: left;
         column-gap: var(--container-gap, 2rem);
         grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(2rem, 1fr);
     
@@ -154,13 +169,28 @@ select {
 
     .grid-container > *:first-child {
         grid-column: 2;
+        outline: 1px solid red;
     }
     
     .grid-container > *:last-child {
         grid-column: 3;
+        outline: 1px solid yellow;
     }
     
+    .grid-container--home {
+        padding-bottom: 6rem;
+    }
 }
+
+.grid-container > *:first-child {
+    outline: 1px solid red;
+}
+
+.grid-container > *:last-child {
+    outline: 1px solid yellow;
+}
+
+
 
 
 .sr-only {
@@ -246,6 +276,7 @@ select {
 
 
 .large-button {
+    font-size: 2rem;
     display: inline-grid;
     place-items: center;
     padding: 0 2em;
@@ -350,3 +381,4 @@ select {
 .number-indicators > [aria-selected="true"] {
     background-color: hsl( var(--clr-white) / 1 );
 }
+
