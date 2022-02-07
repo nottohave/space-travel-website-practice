@@ -88,6 +88,9 @@ body {
     background-color: hsl( var(--clr-dark) );
     line-height: 1.5;
     min-height: 100vh;
+
+    display: grid;
+    grid-template-rows: min-content 1fr;
 }
 
 /* make images easier to work with */
@@ -147,7 +150,6 @@ select {
 
 .grid-container {
     text-align: center;
-    outline: 5px solid limegreen;
     display: grid;
     place-items: center;
     padding-inline: 1rem;
@@ -164,31 +166,23 @@ select {
         text-align: left;
         column-gap: var(--container-gap, 2rem);
         grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(2rem, 1fr);
-    
+        height: 100vh;
     }
 
     .grid-container > *:first-child {
         grid-column: 2;
-        outline: 1px solid red;
     }
     
     .grid-container > *:last-child {
         grid-column: 3;
-        outline: 1px solid yellow;
     }
     
     .grid-container--home {
-        padding-bottom: 6rem;
+        padding-bottom: max(6rem, 20vh);
+        align-items: end;
     }
 }
 
-.grid-container > *:first-child {
-    outline: 1px solid red;
-}
-
-.grid-container > *:last-child {
-    outline: 1px solid yellow;
-}
 
 
 
@@ -254,9 +248,8 @@ select {
 .numbered-title {
     font-family: var(--ff-sans-cond);
     font-size: var(--fs-500);
-    letter-spacing: 4.72px;
-    color:hsl( var(--clr-white) / 0.5);
     text-transform: uppercase;
+    letter-spacing: 4.72px; 
 }
 
 .numbered-title span {
@@ -305,6 +298,8 @@ select {
     opacity: 1;
     transform: scale(1.5);
 }
+
+
 
 .primary-navigation {
     --gap: 8rem;
@@ -382,3 +377,42 @@ select {
     background-color: hsl( var(--clr-white) / 1 );
 }
 
+/* 
+    Page Specific Background
+*/
+
+body {
+    background-size: cover;
+    background-position: bottom center;
+}
+
+/* home */
+.home {
+    background-image: url(./assets/home/background-home-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* 560px */
+@media (min-width: 35em) {
+    .home {
+        background-position: center center;
+        background-image: url(./assets/home/background-home-tablet.jpg);
+    }
+}
+
+/* 720px */
+@media (min-width: 45em) {
+    .home {
+        background-image: url(./assets/home/background-home-desktop.jpg);
+    }
+}
+
+
+#primary-navigation {
+    height: 41.6875rem;
+    width: 15.875rem;
+    flex-direction: column;
+    --gap: 1rem;
+    padding-inline: 1em;
+}
