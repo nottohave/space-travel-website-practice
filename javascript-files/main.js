@@ -1,18 +1,18 @@
-// hamburger onclick
-var hamburger = document.querySelector("#primary-navigation");
-hamburger.addEventListener("click", function() {
-    this.classList.toggle("is-active");
-    if (this.classList.contains("is-active")) {
-        openNav();
+var primeNav = document.querySelector(".primary-navigation");
+var mobileNav = document.querySelector(".mobile-nav-toggle");
+
+// trying out hamburger button
+mobileNav.addEventListener("click", function() {
+    // upon click, get the value of data-visible
+    var visibleValue = primeNav.getAttribute("data-visible");
+    console.log(visibleValue);
+    // change the value of data-visible to true to open nav
+    if (visibleValue === "false") {
+        primeNav.setAttribute("data-visible", true);
+        console.log("true");
     } else {
-        closeNav();
+        primeNav.setAttribute("data-visible", false);
+        console.log("false");
     }
+    // do the opposite afterward
 })
-
-function openNav() {
-    hamburger.style.width = "15.875rem";
-}
-
-function closeNav() {
-    hamburger.style.width = "0";
-}
