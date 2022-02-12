@@ -94,7 +94,7 @@ body {
 
 /* make images easier to work with */
 img,
-picutre {
+picture {
     max-width: 100%;
     display: block;
 }
@@ -357,7 +357,7 @@ select {
         top: 2rem;
         background: transparent;
         border: 0;
-        background-image: url(./assets/shared/icon-hamburger.svg);
+        background-image: url(../assets/shared/icon-hamburger.svg);
         background-repeat: no-repeat;
         background-position: center;
         width: 1.5rem;
@@ -365,7 +365,7 @@ select {
     }    
 
     .mobile-nav-toggle[aria-expanded="true"] {
-        background-image: url(./assets/shared/icon-close.svg);
+        background-image: url(../assets/shared/icon-close.svg);
     }
 
     .mobile-nav-toggle:focus-visible {
@@ -393,7 +393,7 @@ select {
         display: block;
         position: relative;
         height: 1.5px;
-        background: red;
+        background: hsl( var(--clr-white) / 0.3);
         width: 70%;
         order: 1;
         margin-right: -3rem;
@@ -478,7 +478,7 @@ body {
 
 /* home */
 .home {
-    background-image: url(./assets/home/background-home-mobile.jpg);
+    background-image: url(../assets/home/background-home-mobile.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -487,15 +487,18 @@ body {
 @media (min-width: 35em) {
     .home {
         background-position: center center;
-        background-image: url(./assets/home/background-home-tablet.jpg);
+        background-image: url(../assets/home/background-home-tablet.jpg);
     }
 }
 
 /* 720px */
 @media (min-width: 45em) {
     .home {
-        background-image: url(./assets/home/background-home-desktop.jpg);
+        background-image: url(../assets/home/background-home-desktop.jpg);
     }
 }
 
 
+/* Destination Moon */
+.planet {
+}
