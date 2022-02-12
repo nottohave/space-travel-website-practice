@@ -4,16 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+      rel="stylesheet">
+  
+  <!-- CSS  -->
   <link rel="stylesheet" href="./style.css">
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
   
   <title>Frontend Mentor | Space tourism website</title>
 </head>
 <body>
-
   <header class="primary-header flex">
     <div>
-      <img src="./assets/shared/logo.svg" alt="space tourism logo" class="logo">
+      <img src="../assets/shared/logo.svg" alt="space tourism logo" class="logo">
     </div>
 
     <!-- menu button -->
@@ -25,18 +32,18 @@
       <ul id="primary-navigation" data-visible="false" class="primary-navigation underline-indicators flex" >
           <li ><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="./index-main.html">
               <span aria-hidden="true">00</span>Home</a></li>
-          <li ><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="./destination-europa.html">
+          <li ><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="./html-files/destination-moon.html">
               <span aria-hidden="true">01</span>Destination</a></li>
-          <li ><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="./crew-commander.html">
+          <li ><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="./html-files/crew-commander.html">
               <span aria-hidden="true">02</span>Crew</a></li>
-          <li ><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="./technology-vehicle.html">
+          <li ><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="./html-files/technology-vehicle.html">
               <span aria-hidden="true">03</span>Technology</a></li>
   
       </ul>
     </nav>
 
   </header>
-  <main class="grid-container grid-container--home home">
+  <main id="main" class="grid-container grid-container--home home">
     <div>
       <h1 class="text-accent fs-500 ff-sans-cond uppercase letter-spacing-1">So, you want to travel to
       <span class="d-block fs-900 ff-serif text-white">Space</span></h1>
