@@ -323,7 +323,7 @@ select {
         top: 2rem;
         background: transparent;
         border: 0;
-        background-image: url(../assets/shared/icon-hamburger.svg);
+        background-image: url(./assets/shared/icon-hamburger.svg);
         background-repeat: no-repeat;
         background-position: center;
         width: 1.5rem;
@@ -331,7 +331,7 @@ select {
     }    
 
     .mobile-nav-toggle[aria-expanded="true"] {
-        background-image: url(../assets/shared/icon-close.svg);
+        background-image: url(./assets/shared/icon-close.svg);
     }
 
     .mobile-nav-toggle:focus-visible {
@@ -444,7 +444,7 @@ body {
 
 /* home */
 .home {
-    background-image: url(../assets/home/background-home-mobile.jpg);
+    background-image: url(./assets/home/background-home-mobile.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -453,14 +453,14 @@ body {
 @media (min-width: 35em) {
     .home {
         background-position: center center;
-        background-image: url(../assets/home/background-home-tablet.jpg);
+        background-image: url(./assets/home/background-home-tablet.jpg);
     }
 }
 
 /* 720px */
 @media (min-width: 45em) {
     .home {
-        background-image: url(../assets/home/background-home-desktop.jpg);
+        background-image: url(./assets/home/background-home-desktop.jpg);
     }
 }
 
