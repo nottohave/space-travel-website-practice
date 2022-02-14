@@ -253,6 +253,13 @@ select {
     transform: scale(1.5);
 }
 
+.scroller {
+    height: 6.25rem;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+}  
+
 /* header */
 .logo {
     margin: 1.2rem clamp(2rem, 5vw, 3.44rem);
@@ -473,7 +480,7 @@ body {
     row-gap: 10%;
 }
 
-/* destination layout */
+/* DESTINATION layout */
 .grid-container--destination {
     gap: 1.5rem;
     grid-template-areas:
