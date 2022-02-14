@@ -29,7 +29,7 @@
 
     <nav>
       <ul id="primary-navigation" data-visible="false" class="primary-navigation underline-indicators flex" >
-          <li ><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="./index-main.html">
+          <li ><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="../index-main.html">
               <span aria-hidden="true">00</span>Home</a></li>
           <li ><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="./html-files/destination-moon.html">
               <span aria-hidden="true">01</span>Destination</a></li>
@@ -43,46 +43,47 @@
   </header>
 
 
-  <main id="main" class="grid-container grid-container--destination" style="gap: 0.1rem;">
-    <div class="destination flex ff-sans-cond uppercase text-white letter-spacing-2">
-      <span>01</span> pick your destination
+  <main id="main" class="grid-container grid-container--destination" style="gap: 1.5rem;">
+    <div class="destination fs-600 ff-sans-cond uppercase text-white letter-spacing-2 flex">
+      <span ariastyle="opacity: 0.5">01</span> pick your destination
     </div>
 
-    <div class="planet">
-      <img src="../assets/destination/image-moon.png" alt="moon planet">
+    <div class="planet flex primary-header">
+      <img src="../assets/destination/image-moon.png" alt="planet Moon">
     </div>
 
-    <section class="planets">
-      <nav>
-        <ul id="" data-visible="false" class="primary-navigation underline-indicators flex" style="background-color: unset;">
-            <li ><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="./index-main.html">
-                Moon</a></li>
-            <li ><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="./html-files/destination-moon.html">
-                Mars</a></li>
-            <li ><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="./html-files/crew-commander.html">
-                Europa</a></li>
-            <li ><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="./html-files/technology-vehicle.html">
-                Titan</a></li>
-        </ul>
-
-      </nav>
-
-      <h1>Moon</h1>
-      <p>
-        See our planet as you've never seen it before. A perfect relaxing trip away to help 
-        regain perspective and come back refreshed. While you're there, take in some history 
-        by visiting the Luna 2 and Apollo 11 landing sites.    
-      </p>
-
-      <hr>
-
-      <div class="planet_distance">
-        avg. distance <span>384400 km</span>
+    <section>
+      <div class="tab-lists underline-indicators flex" style="justify-content: center;">
+        <button aria-selected="true" class="uppercase ff-sans-cond text-accent bg-dark letter-spacing-2" style="cursor: pointer;">Moon</button>
+        <button aria-selected="false" class="uppercase ff-sans-cond text-accent bg-dark letter-spacing-2" style="cursor: pointer;">Mars</button>
+        <button aria-selected="false" class="uppercase ff-sans-cond text-accent bg-dark letter-spacing-2" style="cursor: pointer;">Europa</button>
+        <button aria-selected="false" class="uppercase ff-sans-cond text-accent bg-dark letter-spacing-2" style="cursor: pointer;">Titan</button>
       </div>
 
-      <div class="planet_travelTime">
-        est. travel time <span>3 days</span>
-      </div>
+      <article class="planet_infos">
+        <h1 class="uppercase ff-serif fs-900">Moon</h1>
+
+        <p class="ff-sans-normal fs-400 text-accent">
+          See our planet as you've never seen it before. A perfect relaxing trip away to help 
+          regain perspective and come back refreshed. While you're there, take in some history 
+          by visiting the Luna 2 and Apollo 11 landing sites.    
+        </p>
+  
+        <hr>
+  
+        <div class="flex planet_stats">
+          <section>
+            <h3 class="text-accent fs-200 uppercase">Avg. distance</h3>
+            <p class="fs-500 ff-serif uppercase text-white">384,400 km</p>
+          </section>
+
+          <section>
+            <h3 class="text-accent fs-200 uppercase">Est. travel time</h3>
+            <p class="fs-500 ff-serif uppercase text-white">3 days</p>
+          </section>
+        </div>
+  
+      </article>
   
     </section>  
   </main>
