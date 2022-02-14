@@ -475,6 +475,7 @@ body {
 
 /* destination layout */
 .grid-container--destination {
+    gap: 1.5rem;
     grid-template-areas:
         "heading"
         "planet"
@@ -502,11 +503,11 @@ body {
 .planet_infos {
     grid-area: bodyContent;
     margin-top: 1.25rem;
-    
 } 
 
 .planet_infos hr {
     margin: 2rem 0rem;
+    border: 1px solid hsl( var(--clr-light)  / 0.1 );
 }
 
 .planet_stats {
