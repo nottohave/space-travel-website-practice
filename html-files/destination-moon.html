@@ -16,7 +16,7 @@
   
   <title>Frontend Mentor | Space tourism website</title>
 </head>
-<body class="scroller">
+<body style="overflow: scroll; scroll-behavior: smooth;">
   <header class="primary-header flex">
     <div>
       <img src="../assets/shared/logo.svg" alt="space tourism logo" class="logo">
@@ -45,7 +45,7 @@
 
   <main id="main" class="grid-container grid-container--destination">
     <div class="destination fs-600 ff-sans-cond uppercase text-white letter-spacing-2 flex">
-      <span ariastyle="opacity: 0.5">01</span> pick your destination
+      <span style="opacity: 0.5">01</span> pick your destination
     </div>
 
     <div class="planet flex primary-header">
@@ -63,7 +63,7 @@
       <article class="planet_infos">
         <h1 class="uppercase ff-serif fs-900">Moon</h1>
 
-        <p class="ff-sans-normal fs-400 text-accent" style="width: clamp(20.44rem, 5vw + 1rem, 27.75rem)">
+        <p class="planet_infos__p ff-sans-normal fs-400 text-accent">
           See our planet as you've never seen it before. A perfect relaxing trip away to help 
           regain perspective and come back refreshed. While you're there, take in some history 
           by visiting the Luna 2 and Apollo 11 landing sites.
@@ -71,7 +71,7 @@
   
         <hr>
   
-        <div class="flex planet_stats">
+        <div class="flex planet_stats"> 
           <section>
             <h3 class="text-accent fs-200 uppercase">Avg. distance</h3>
             <p class="fs-500 ff-serif uppercase text-white">384,400 km</p>
