@@ -521,7 +521,7 @@ body {
     justify-content: center;
 }
 
-/* Destination Tablet */
+/* DESTINATION Tablet */
 @media (min-width: 35em) {
     
     .grid-container--destination {
@@ -554,8 +554,6 @@ body {
     .planet_infos__p {
         width: 60ch;
     }
-
-    
 }
 
 /* Destination Desktop */
