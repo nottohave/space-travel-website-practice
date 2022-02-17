@@ -531,8 +531,10 @@ body {
 
     .grid-container--destination > .destination {
         font-size: var(--fs-600);
-        width: 100vw;
         grid-column: 1;
+        grid-row: 1;
+        justify-self: start;
+
     }
 
     .grid-container--destination > .planet img {
@@ -551,13 +553,18 @@ body {
     .grid-container * {
         max-width: unset;
     }
+
     .planet_infos__p {
         width: 60ch;
     }
-}
 
-/* Destination Desktop */
-@media (min-width: 45em) {
+    .planet_stats {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+/* DESKTOP */
+@media (min-width: 60em) {
     .grid-container {
         text-align: left;
         column-gap: var(--container-gap, 2rem);
@@ -575,6 +582,15 @@ body {
     .grid-container--home {
         padding-bottom: max(6rem, 20vh);
         align-items: end;
+    }
+
+    /* Destination Desktop */
+    .grid-container--destination {
+        justify-content: start;
+        grid-template-areas: 
+            '. title title .'
+            '. image tabs .'
+            '. image content .';
     }
 }
 
