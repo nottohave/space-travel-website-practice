@@ -11,9 +11,10 @@
     /* font-sizes */
     --fs-900: clamp(5rem, 8vw + 1rem, 9.375rem); /* clamp: min, mid, max */
     --fs-800: 3.5rem;
+    --fs-750: 1.75rem;
     --fs-700: 1.5rem;
     --fs-600: 1rem;
-    --fs-500: 1.75rem;
+    --fs-500: 1rem;
     --fs-400: 0.9375rem;
     --fs-300: 1rem;
     --fs-200: 0.875rem;
@@ -40,7 +41,7 @@
         --fs-800: 6.25rem;
         --fs-700: 3.5rem;
         --fs-600: 2rem;
-        --fs-400: 1.125rem;
+        /* --fs-400: 1.125rem; */
     }
 } 
 
@@ -141,11 +142,12 @@ select {
 
 .d-block {
     display: block;
+    margin: 1rem 0;
 }
 
 
 /* set max character so p wont be too runny */
-.grid-container * {
+.grid-container p:not([class]) {
     max-width: 50ch;
 }
 
@@ -459,12 +461,11 @@ body {
 }
 
 /* 720px */
-@media (min-width: 45em) {
+@media (min-width: 60em) {
     .home {
         background-image: url(./assets/home/background-home-desktop.jpg);
     }
 }
-
 
 .grid-container {
     text-align: center;
@@ -472,6 +473,11 @@ body {
     place-items: center;
     padding-inline: 1rem;
     row-gap: 10%;
+}
+
+/* HOME Mobile layout */
+.grid-container--home > .home-content > h1 {
+    max-width: 100%;
 }
 
 /* DESTINATION layout */
@@ -497,7 +503,12 @@ body {
     max-width: 60%;
 }
 
-.grid-container--destination > .tab-list {
+.grid-container--destination > .tabList_planetInfos {
+    max-width: 20.44rem;
+}
+
+.grid-container--destination > .tabList_planetInfos > .tab-lists {
+    justify-content: center;
     grid-area: tabs;
 }
 
@@ -505,10 +516,6 @@ body {
     grid-area: bodyContent;
     margin-top: 1.25rem;
 } 
-
-.planet_infos__p {
-    width: 30ch;
-}
 
 .planet_infos hr {
     margin: 2rem 0rem;
@@ -521,9 +528,12 @@ body {
     justify-content: center;
 }
 
-/* DESTINATION Tablet */
+.planet_stats p {
+    font-size: var(--fs-750);
+}
+
 @media (min-width: 35em) {
-    
+    /* DESTINATION Tablet */
     .grid-container--destination {
         margin-top: 2.5rem;
         gap: 3.5rem;
@@ -546,22 +556,30 @@ body {
         padding: var(--underline-gap, 0.5rem) 0; 
     }
 
-    .grid-container--destination > section > .planet_infos {
-        margin-top: 1rem;
-    }
-
-    .grid-container * {
+    .grid-container--destination > .tabList_planetInfos {
         max-width: unset;
     }
 
+    .tabList_planetInfos * {
+        outline: 3px solid limegreen;
+    }
+
+    .grid-container--destination > section > .planet_infos h1,
     .planet_infos__p {
-        width: 60ch;
+        margin-top: 1.5rem;
     }
 
     .planet_stats {
+        margin-top: 0;
         flex-direction: row;
         justify-content: space-around;
+        
     }
+
+    
+
+    
+
 }
 /* DESKTOP */
 @media (min-width: 60em) {
@@ -571,27 +589,63 @@ body {
         grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(2rem, 1fr);
     }
 
-    .grid-container > *:first-child {
+    .grid-container--home {
+        padding-bottom: max(6rem, 20vh);
+        align-items: end;
+    }
+
+    .grid-container--home > *:first-child {
         grid-column: 2;
     }
     
-    .grid-container > *:last-child {
+    .grid-container--home > *:last-child {
         grid-column: 3;
     }
     
     .grid-container--home {
         padding-bottom: max(6rem, 20vh);
         align-items: end;
+        column-gap: unset;
+    }
+
+    .grid-container--home > .home-content > p {
+        max-width: 50ch;
     }
 
     /* Destination Desktop */
     .grid-container--destination {
         justify-content: start;
+        align-items: flex-start;
         grid-template-areas: 
             '. title title .'
             '. image tabs .'
             '. image content .';
     }
+
+    .grid-container--destination > .destination {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .grid-container--destination > .planet {
+        grid-column: 2;
+        width: 100%;
+        height: 100%;
+    }
+
+    .grid-container--destination > .planet img{
+        max-width: 100%;
+        height: 100%;
+    }
+
+    .tab-lists {
+        justify-content: unset;
+    }
+
+
+
+
+
 }
 
 
