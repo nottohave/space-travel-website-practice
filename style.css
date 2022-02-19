@@ -452,6 +452,15 @@ body {
     background-size: cover;
 }
 
+/* Crew */
+.crew {
+    background-image: url(./assets/crew/background-crew-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+
 /* 560px */
 @media (min-width: 35em) {
     .home {
@@ -538,8 +547,40 @@ body {
 /* ---------------------- */
 /* CREW MOBILE */
 /* ---------------------- */
+.crew * {
+    outline: 3px solid limegreen;
+}
 
+.crew-member {
+    flex-direction: column; 
+    gap: 0; 
+    align-items: center;
+}
 
+.crew-title {
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.crew > .crew-member > hr {
+    width: 100%;
+    margin: 0; 
+    display: flex; 
+    align-items: start;
+}
+
+.crew {
+    gap: 1.5rem;
+    grid-template-rows: 8rem minmax(10rem, 20rem) 15rem 5rem;
+}
+
+.tabList_crew {
+    flex-direction: column;
+}
+
+/* ---------------------- */
+/* 560px screen size */
+/* ---------------------- */
 
 @media (min-width: 35em) {
 
@@ -586,7 +627,11 @@ body {
     
 
 }
-/* DESKTOP */
+
+/* ---------------------- */
+/* 960px screen size */
+/* ---------------------- */
+
 @media (min-width: 60em) {
     .grid-container {
         text-align: left;
