@@ -8,4 +8,8 @@ Build destination moon page - lesson the destination page: mobile layout, medium
 
 For the content lesson: learn to set up the crew page on my own then watch tutorial for feedbacks.
 
+02/19/22
+Construct crew page in mobile and tablet form. Fix minor padding problems.
+
+
 [Live Site](https://nottohave.github.io/space-travel-website-practice/)
