@@ -548,8 +548,7 @@ body {
 /* CREW MOBILE */
 /* ---------------------- */
 .grid-container--crew {
-    gap: 0rem;
-    /* margin: auto; */
+    row-gap: 0;
     grid-template-areas:
         "heading"
         "planet"
@@ -559,6 +558,7 @@ body {
 
 .grid-container--crew > .crew-title {
     grid-area: heading;
+    margin-top: 2rem;
     font-size: 1.2rem;
     width: 100%;
     justify-content: center;
@@ -578,11 +578,6 @@ body {
 .crew > .crew-member > hr {
     width: 100%;
     margin: 0; 
-}
-
-.grid-container--crew > .tabList_planetInfos > .tab-lists {
-    justify-content: center;
-    grid-area: tabs;
 }
 
 .grid-container--crew > section > .planet_infos {
@@ -644,8 +639,8 @@ body {
     /* CREW Tablet */
     /* ---------------------- */    
     .grid-container--crew {
-        padding-bottom: 0;
     }
+
     .grid-container--crew > .crew-title {
         justify-content: start;
         align-content: start;
@@ -654,6 +649,11 @@ body {
 
     .crew-member {
         grid-area: bodyContent;
+        align-self: end;
+    }
+
+    .crew-member > hr {
+        display: none;
     }
 
     .crew-details {
