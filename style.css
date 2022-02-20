@@ -547,41 +547,56 @@ body {
 /* ---------------------- */
 /* CREW MOBILE */
 /* ---------------------- */
-.crew * {
-    outline: 3px solid limegreen;
+.grid-container--crew {
+    gap: 0rem;
+    /* margin: auto; */
+    grid-template-areas:
+        "heading"
+        "planet"
+        "tabs"
+        "bodyContent";
+}
+
+.grid-container--crew > .crew-title {
+    grid-area: heading;
+    font-size: 1.2rem;
+    width: 100%;
+    justify-content: center;
+}
+
+.grid-container--crew > .planet img {
+    grid-area: planet;
+    max-width: 60%;
 }
 
 .crew-member {
-    flex-direction: column; 
     gap: 0; 
+    flex-direction: column; 
     align-items: center;
-}
-
-.crew-title {
-    margin-top: 1.5rem;
-    font-size: 1.2rem;
 }
 
 .crew > .crew-member > hr {
     width: 100%;
     margin: 0; 
-    display: flex; 
-    align-items: start;
 }
 
-.crew {
-    gap: 1.5rem;
-    grid-template-rows: 8rem minmax(10rem, 20rem) 15rem 5rem;
+.grid-container--crew > .tabList_planetInfos > .tab-lists {
+    justify-content: center;
+    grid-area: tabs;
 }
 
-.tabList_crew {
-    flex-direction: column;
+.grid-container--crew > section > .planet_infos {
+    grid-area: bodyContent;
+    margin-top: 1.25rem;
+} 
+
+.crew-details {
+    height: 100%;
 }
 
 /* ---------------------- */
 /* 560px screen size */
 /* ---------------------- */
-
 @media (min-width: 35em) {
 
     /* ---------------------- */
@@ -624,7 +639,31 @@ body {
         flex-direction: row;
         justify-content: space-around;
     }
-    
+
+    /* ---------------------- */
+    /* CREW Tablet */
+    /* ---------------------- */    
+    .grid-container--crew {
+        padding-bottom: 0;
+    }
+    .grid-container--crew > .crew-title {
+        justify-content: start;
+        align-content: start;
+        font-size: 1.5rem;
+    }
+
+    .crew-member {
+        grid-area: bodyContent;
+    }
+
+    .crew-details {
+        grid-area: planet;
+    }
+
+    .tab-lists {
+        grid-area: tabs;
+    }
+
 
 }
 
