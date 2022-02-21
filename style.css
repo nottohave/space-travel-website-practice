@@ -638,9 +638,6 @@ body {
     /* ---------------------- */
     /* CREW Tablet */
     /* ---------------------- */    
-    .grid-container--crew {
-    }
-
     .grid-container--crew > .crew-title {
         justify-content: start;
         align-content: start;
@@ -734,6 +731,42 @@ body {
     .planet_stats {
         --gap: min(6vw, 6rem);
         justify-content: start;
+    }
+
+    /* ---------------------- */
+    /* CREW */
+    /* ---------------------- */
+    .grid-container--crew {
+        grid-template-areas:
+            ". title title ."
+            ". content image ."
+            ". tabs image .";
+    }
+
+    .grid-container--crew > .crew-title {
+        grid-area: title;
+    }
+    
+    .grid-container--crew > .dot-indicators {
+        grid-area: tabs;
+        justify-self: start;
+    }
+
+
+    .grid-container--crew > .crew-member {
+        grid-area: image;
+        height: 100%;
+    }
+
+    .grid-container--crew > img {
+        align-self: end;
+        max-width: unset;
+        height: unset;
+    }
+
+
+    .grid-container--crew > .crew-details {
+        grid-area: content;
     }
 
 
