@@ -610,6 +610,10 @@ body {
     height: 100%;
 }
 
+.crew-details > h1 > span {
+    opacity: 0.5;
+}
+
 /* ---------------------- */
 /* 560px screen size */
 /* ---------------------- */
@@ -788,6 +792,15 @@ body {
 
     .grid-container--crew > .crew-details {
         grid-area: content;
+        height: unset;
+    }
+
+    .crew-details > h1 {
+        font-size: 3rem;
+    }
+
+    .grid-container--crew > .crew-details > p {
+        width: 70%;
     }
 
 
