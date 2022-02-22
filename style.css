@@ -225,7 +225,6 @@ select {
 /* ------------------- */
 /* COMPONENTS          */
 /* ------------------- */
-
 .large-button {
     font-size: 2rem;
     display: inline-grid;
@@ -263,6 +262,7 @@ select {
 }
 
 .primary-header {
+    background: none;
     justify-content: space-between;
     align-items: center;
 }
@@ -349,7 +349,7 @@ select {
     }
 }
 
-@media (min-width: 35em) and (max-width: 45em) {
+@media (min-width: 35em) and (max-width: 44.999em) {
     .primary-navigation span {
         display: none;
     }
@@ -376,12 +376,12 @@ select {
     }
 }
 
-
 .underline-indicators > * {
     border: pointer;
     padding: var(--underline-gap, 1rem) 0;
     border: 0;
     border-bottom: .2rem solid hsl( var(--clr-white) / 0 );
+    background-color: transparent;
 }
 
 .underline-indicators > *:hover,
@@ -450,6 +450,27 @@ body {
     background-image: url(./assets/home/background-home-mobile.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+/* destination */
+.destination {
+    background-image: url(./assets/destination/background-destination-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media (min-width: 35em) {
+    .destination {
+        background-position: center center;
+        background-image: url(./assets/destination/background-destination-tablet.jpg);
+    }
+}
+
+/* 720px */
+@media (min-width: 60em) {
+    .destination {
+        background-image: url(./assets/destination/background-destination-desktop.jpg);
+    }
 }
 
 /* Crew */
