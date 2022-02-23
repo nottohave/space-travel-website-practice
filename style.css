@@ -513,6 +513,9 @@ body {
 /* ---------------------- */
 /* DESTINATION MOBILE */
 /* ---------------------- */
+[hidden] {
+    display: none;
+}
 .grid-container--destination {
     gap: 1.5rem;
     grid-template-areas:
