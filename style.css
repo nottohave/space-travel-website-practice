@@ -806,3 +806,7 @@ body {
         width: 70%;
     }
 }
+
+[role="tab"]:focus {
+    color: limegreen;
+}
