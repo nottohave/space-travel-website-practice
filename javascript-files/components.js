@@ -1,13 +1,16 @@
 const tabList = document.querySelector('[role="tablist"]');
 const tab = tabList.querySelectorAll('[role="tab"]');
 
+const slideLeft = 37;
+const slideRight = 39;
+const spaceBar = 32;
+
 let tabMe = 0;
 
 // slide left and right with arrow keys
-tabList.addEventListener('keydown', (e) => {
-    const slideLeft = 37;
-    const slideRight = 39;
-    const spaceBar = 32;
+tabList.addEventListener('keydown', switchTab);
+
+function switchTab(e) {
     const keyPress = e.keyCode;
 
     // change the tabindex of the current tab to -1 
@@ -26,7 +29,7 @@ tabList.addEventListener('keydown', (e) => {
     if (keyPress == slideLeft) {
         tabMe = tabMe - 1;
         if (tabMe === -1) {
-            tabMe = 3;
+            tabMe = tab.length - 1;
         }
         tab[tabMe].focus();
     } 
@@ -34,8 +37,6 @@ tabList.addEventListener('keydown', (e) => {
     // if the user hit on space bar
     if (keyPress == spaceBar) {
         tab.tabIndex = "0";
-        console.log("activated");
     }
-
-})
+}
 
