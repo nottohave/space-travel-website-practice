@@ -37,6 +37,5 @@ tabList.addEventListener('keydown', (e) => {
         console.log("activated");
     }
 
-    // space function
 })
 
