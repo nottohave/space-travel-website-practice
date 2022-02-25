@@ -1,6 +1,6 @@
 const tabList = document.querySelector('[role="tablist"]');
 const tab = tabList.querySelectorAll('[role="tab"]');
-var planetInfos = document.querySelectorAll(".planet_infos");
+const planetInfos = document.querySelectorAll(".planet_infos");
 
 const slideLeft = 37;
 const slideRight = 39;
@@ -52,16 +52,20 @@ function moveTab(click) {
     const targetClick = click.target;
     let movingClick = targetClick.getAttribute("aria-controls");
 
+    // hide all panels
     for (i = 0; i < planetInfos.length; i++) {
         planetInfos[i].setAttribute("hidden", "true");
+    }
+    // select all role tab
+    for (i = 0; i < tab.length; i++) {
+        tab[i].setAttribute("aria-selected", "false");
     }
 
     const tabContainer = targetClick.parentNode;
     const contentContainer = tabContainer.parentNode;
 
-    // when user click on said-button, get to the parent of that node and display that container
-    // hide the nonactive container
+    // remove hidden and set active to the button upon user click
     contentContainer.querySelector([`#${movingClick}`]).removeAttribute('hidden');
-
+    movingClick.setAttribute("aria-controls", "true");
     
 }
