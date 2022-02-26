@@ -73,7 +73,6 @@ function moveTab(click) {
         picture[i].setAttribute("hidden", "true");
     }
 
-
     // remove hidden and set active to the button upon user click
     contentContainer.querySelector([`#${movingClick}`]).removeAttribute('hidden');
     mainContainer.querySelector([`#${movingClick}`]).removeAttribute('hidden');
