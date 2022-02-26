@@ -10,14 +10,14 @@ let tabMe = 0;
 
 // create click event on the tab that user click on
 tab.forEach(function(tab) {
-    tab.addEventListener('click', moveTab)
+    tab.addEventListener('click', clickOnTab)
 });
 
 // slide left and right with arrow keys
-tabList.addEventListener('keydown', switchTab);
+tabList.addEventListener('keydown', switchTabByKeys);
 
 // function for keyboard switching on tab control
-function switchTab(key) {
+function switchTabByKeys(key) {
     const keyPress = key.keyCode;
 
     // change the tabindex of the current tab to -1 
@@ -48,7 +48,7 @@ function switchTab(key) {
 }
 
 // Changing tab content upon user's click
-function moveTab(click) {
+function clickOnTab(click) {
     const targetClick = click.target;
     // tab list of buttons selected
     const tabContainer = targetClick.parentNode; 
