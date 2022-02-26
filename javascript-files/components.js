@@ -50,13 +50,20 @@ function switchTab(key) {
 // Changing tab content upon user's click
 function moveTab(click) {
     const targetClick = click.target;
+    // tab list of buttons selected
+    const tabContainer = targetClick.parentNode; 
+    // body content selected
+    const contentContainer = tabContainer.parentNode;
+    // main body. Main body > body content, tab list > button; 
+    const mainContainer = contentContainer.parentNode;
+    
     let movingClick = targetClick.getAttribute("aria-controls");
 
-    // hide all panels
+    // hide all planet information
     for (i = 0; i < planetInfos.length; i++) {
         planetInfos[i].setAttribute("hidden", "true");
     }
-    // select all role tab
+    // select all role tab and set aria selected to false
     for (i = 0; i < tab.length; i++) {
         tab[i].setAttribute("aria-selected", "false");
     }
@@ -66,16 +73,8 @@ function moveTab(click) {
         picture[i].setAttribute("hidden", "true");
     }
 
-    // button selected
-    const tabContainer = targetClick.parentNode; 
-    // body content selected
-    const contentContainer = tabContainer.parentNode;
-    // main body. Main body > body content, tab list > button; 
-    const mainContainer = contentContainer.parentNode;
+
     // remove hidden and set active to the button upon user click
     contentContainer.querySelector([`#${movingClick}`]).removeAttribute('hidden');
     mainContainer.querySelector([`#${movingClick}`]).removeAttribute('hidden');
-    movingClick.setAttribute("aria-controls", "true");
-    
-    
 }
