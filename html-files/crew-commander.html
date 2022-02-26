@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="../style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
   <script src="../javascript-files/main.js" defer></script>
+  <script src="../javascript-files/components.js" defer></script>
 
   <title>Frontend Mentor | Space tourism website</title>
 
@@ -33,7 +34,7 @@
       <ul id="primary-navigation" data-visible="false" class="primary-navigation underline-indicators flex" >
           <li ><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="../index.html">
               <span aria-hidden="true">00</span>Home</a></li>
-          <li ><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="./destination-moon.html">
+          <li ><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="./destination.html">
               <span aria-hidden="true">01</span>Destination</a></li>
           <li ><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="./crew-commander.html">
               <span aria-hidden="true">02</span>Crew</a></li>
@@ -45,7 +46,7 @@
   </header>
 
   <main id="main" class="grid-container grid-container--crew crew">
-    <div class="crew-title ff-sans-cond uppercase text-white letter-spacing-2 flex">
+    <div class="crew-title ff-sans-cond uppercase text-white letter-spacing-2 flex" id="commander">
       <span style="opacity: 0.5">02</span> Meet your crew
     </div>
 
@@ -55,19 +56,19 @@
       <hr>    
     </picture>
 
-    <picture hidden class="crew-member planet flex" >
+    <picture hidden class="crew-member planet flex" id="mission-specialist">
       <source srcset="../assets/crew/image-mark-shuttleworth.webp" type="image/webp">
       <img src="../assets/crew/image-mark-shuttleworth.png" alt="image-mark-shuttleworth">
       <hr>    
     </picture>
 
-    <picture hidden class="crew-member planet flex" >
+    <picture hidden class="crew-member planet flex" id="pilot">
       <source srcset="../assets/crew/image-victor-gloves.webp" type="image/webp">
       <img src="../assets/crew/image-victor-glover.png" alt="image-victor-glover">
       <hr>    
     </picture>
 
-    <picture hidden class="crew-member planet flex" >
+    <picture hidden class="crew-member planet flex" id="flight-engineer">
       <source srcset="../assets/crew/image-anousheh-ansari.webp" type="image/webp">
       <img src="../assets/crew/image-anousheh-ansari.png" alt="image-anousheh-ansari">
       <hr>    
@@ -76,14 +77,23 @@
 
     <!-- Dots -->
     <!-- The three buttons -->
-    <div class="dot-indicators flex">
-      <button aria-selected="true"><span class="sr-only">The commander</span> </button>
-      <button aria-selected="false"><span class="sr-only">The mission specialist</span> </button>
-      <button aria-selected="false"><span class="sr-only">The pilot</span> </button>
-      <button aria-selected="false"><span class="sr-only">The crew engineer</span> </button>
+    <div class="dot-indicators flex" role="tablist">
+      <button aria-selected="true" role="tab" tabindex="0" aria-controls="commander">
+        <span class="sr-only">The commander</span> 
+      </button>
+      <button aria-selected="false" role="tab" tabindex="-1" aria-controls="mission-specialist">
+        <span class="sr-only">The mission specialist</span> 
+      </button>
+      <button aria-selected="false" role="tab" tabindex="-1" aria-controls="pilot">
+        <span class="sr-only">The pilot</span> 
+      </button>
+      <button aria-selected="false" role="tab" tabindex="-1" aria-controls="flight-engineer">
+        <span class="sr-only">The flight engineer</span> 
+      </button>
     </div>
 
-    <article class="crew-details">
+    <!-- Commander -->
+    <article class="crew-details" id="commander">
       <h1 class="fs-700 ff-serif uppercase text-white"> 
         <span class="fs-600 ff-serif uppercase text-white d-block">Commander</span> 
         Douglas Hurley</h1>
@@ -94,7 +104,8 @@
       </p>
     </article>
 
-    <article hidden class="crew-details">
+    <!-- Flight Engineer -->
+    <article hidden class="crew-details" id="mission-specialist">
     <h1 class="fs-700 ff-serif uppercase text-white"> 
       <span class="fs-600 ff-serif uppercase text-white d-block">Flight Engineer</span> 
       Anousheh Ansari</h1>
@@ -105,8 +116,8 @@
     </p>
     </article>
 
-
-    <article hidden class="crew-details">
+    <!-- Pilot -->
+    <article hidden class="crew-details" id="pilot">
       <h1 class="fs-700 ff-serif uppercase text-white"> 
         <span class="fs-600 ff-serif uppercase text-white d-block">Pilot</span> 
         Victor Glover</h1>
@@ -118,8 +129,8 @@
      </p>
     </article>
 
-
-    <article hidden class="crew-details">
+    <!-- Mission Specialist -->
+    <article hidden class="crew-details" id="flight-engineer">
       <h1 class="fs-700 ff-serif uppercase text-white"> 
         <span class="fs-600 ff-serif uppercase text-white d-block">Mission Specialist</span> 
         Mark Shuttleworth</h1>
