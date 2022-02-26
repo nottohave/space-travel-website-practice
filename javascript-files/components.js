@@ -60,19 +60,22 @@ function moveTab(click) {
     for (i = 0; i < tab.length; i++) {
         tab[i].setAttribute("aria-selected", "false");
     }
-    // select all picture
+    // hide all pictures
     let picture = document.querySelectorAll('picture');
     for (i = 0; i < picture.length; i++) {
-        // console.log(picture.length);
-        // console.log(picture[i]);
         picture[i].setAttribute("hidden", "true");
     }
 
-    const tabContainer = targetClick.parentNode;
+    // button selected
+    const tabContainer = targetClick.parentNode; 
+    // body content selected
     const contentContainer = tabContainer.parentNode;
-
+    // main body. Main body > body content, tab list > button; 
+    const mainContainer = contentContainer.parentNode;
     // remove hidden and set active to the button upon user click
     contentContainer.querySelector([`#${movingClick}`]).removeAttribute('hidden');
+    mainContainer.querySelector([`#${movingClick}`]).removeAttribute('hidden');
     movingClick.setAttribute("aria-controls", "true");
+    
     
 }
