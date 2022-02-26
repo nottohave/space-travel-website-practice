@@ -60,6 +60,13 @@ function moveTab(click) {
     for (i = 0; i < tab.length; i++) {
         tab[i].setAttribute("aria-selected", "false");
     }
+    // select all picture
+    let picture = document.querySelectorAll('picture');
+    for (i = 0; i < picture.length; i++) {
+        // console.log(picture.length);
+        // console.log(picture[i]);
+        picture[i].setAttribute("hidden", "true");
+    }
 
     const tabContainer = targetClick.parentNode;
     const contentContainer = tabContainer.parentNode;
