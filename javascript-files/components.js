@@ -57,12 +57,20 @@ function clickOnTab(click) {
     // main body. Main body > body content, tab list > button; 
     const mainContainer = contentContainer.parentNode;
     
+    console.log(crewContainer)
+
     let movingClick = targetClick.getAttribute("aria-controls");
 
     // hide all planet information
     for (i = 0; i < planetInfos.length; i++) {
         planetInfos[i].setAttribute("hidden", "true");
     }
+
+    // hide all crew information
+    for (i = 0; i < crewInfos.length; i++) {
+        crewInfos[i].setAttribute("hidden", "true");
+    }
+    
     // select all role tab and set aria selected to false
     for (i = 0; i < tab.length; i++) {
         tab[i].setAttribute("aria-selected", "false");
@@ -73,7 +81,7 @@ function clickOnTab(click) {
         picture[i].setAttribute("hidden", "true");
     }
 
-    // remove hidden and set active to the button upon user click
+    // remove hidden content  and set active to the button upon user click
     contentContainer.querySelector([`#${movingClick}`]).removeAttribute('hidden');
     mainContainer.querySelector([`#${movingClick}`]).removeAttribute('hidden');
 }
