@@ -408,12 +408,12 @@ select {
     background-color: hsl( var(--clr-white)  / 0.25 );
 }
 
-.dot-indicators > *:hover,
-.dot-indicators > *:focus {
+.dot-indicators > *:hover {
     background-color: hsl( var(--clr-white) / .5);
 }
 
-.dot-indicators > [aria-selected="true"] {
+.dot-indicators > [aria-selected="true"],
+.dot-indicators > *:focus {
     background-color: hsl( var(--clr-white) / 1 );
 }
 
