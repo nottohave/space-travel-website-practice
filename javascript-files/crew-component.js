@@ -75,5 +75,4 @@ function clickOnTab(click) {
     // remove hidden content  and set active to the button upon user click
     mainContainer.querySelector([`#${movingClick}`]).removeAttribute('hidden');
     mainContainer.querySelector([`.${movingClick}`]).removeAttribute('hidden');
-
 }
