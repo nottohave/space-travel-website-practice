@@ -1,6 +1,6 @@
 const tabList = document.querySelector('[role="tablist"]');
 const tab = tabList.querySelectorAll('[role="tab"]');
-const planetInfos = document.querySelectorAll(".planet_infos");
+const crewDetails = document.querySelector('article');
 
 const slideLeft = 37;
 const slideRight = 39;
@@ -52,29 +52,20 @@ function clickOnTab(click) {
     const targetClick = click.target;
     // tab list of buttons selected
     const tabContainer = targetClick.parentNode; 
-    // body content selected
-    const contentContainer = tabContainer.parentNode;
-    // main body. Main body > body content, tab list > button; 
-    const mainContainer = contentContainer.parentNode;
-    
-    console.log(crewContainer)
+    // main content selected
+    const mainContainer = tabContainer.parentNode;
 
     let movingClick = targetClick.getAttribute("aria-controls");
-
-    // hide all planet information
-    for (i = 0; i < planetInfos.length; i++) {
-        planetInfos[i].setAttribute("hidden", "true");
-    }
-
     // hide all crew information
-    for (i = 0; i < crewInfos.length; i++) {
-        crewInfos[i].setAttribute("hidden", "true");
+    for (i = 0; i < crewDetails.length; i++) {
+        crewDetails[i].setAttribute("hidden", "true");
     }
     
     // select all role tab and set aria selected to false
     for (i = 0; i < tab.length; i++) {
         tab[i].setAttribute("aria-selected", "false");
     }
+
     // hide all pictures
     let picture = document.querySelectorAll('picture');
     for (i = 0; i < picture.length; i++) {
@@ -82,6 +73,6 @@ function clickOnTab(click) {
     }
 
     // remove hidden content  and set active to the button upon user click
-    contentContainer.querySelector([`#${movingClick}`]).removeAttribute('hidden');
     mainContainer.querySelector([`#${movingClick}`]).removeAttribute('hidden');
+    console.log(movingClick)
 }
