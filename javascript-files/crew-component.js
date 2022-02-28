@@ -1,6 +1,6 @@
 const tabList = document.querySelector('[role="tablist"]');
 const tab = tabList.querySelectorAll('[role="tab"]');
-const crewDetails = document.querySelector('article');
+const articles = document.querySelectorAll('article');
 
 const slideLeft = 37;
 const slideRight = 39;
@@ -55,10 +55,12 @@ function clickOnTab(click) {
     // main content selected
     const mainContainer = tabContainer.parentNode;
 
-    let movingClick = targetClick.getAttribute("aria-controls");
+    // selecting aria controls from buttons
+    let aria_controls = targetClick.getAttribute("aria-controls");
+
     // hide all crew information
-    for (i = 0; i < crewDetails.length; i++) {
-        crewDetails[i].setAttribute("hidden", "true");
+    for (i = 0; i < articles.length; i++) {
+        articles[i].setAttribute("hidden", "true");
     }
     
     // select all role tab and set aria selected to false
@@ -73,6 +75,6 @@ function clickOnTab(click) {
     }
 
     // remove hidden content  and set active to the button upon user click
-    mainContainer.querySelector([`#${movingClick}`]).removeAttribute('hidden');
-    mainContainer.querySelector([`.${movingClick}`]).removeAttribute('hidden');
+    mainContainer.querySelector([`#${aria_controls}`]).removeAttribute('hidden');
+    mainContainer.querySelector([`.${aria_controls}`]).removeAttribute('hidden');
 }
