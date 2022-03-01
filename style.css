@@ -618,6 +618,16 @@ body {
 }
 
 /* ---------------------- */
+/* Technology Mobile */
+/* ---------------------- */
+.grid-container--technology {
+
+}
+
+.technology-numbers {
+}
+
+/* ---------------------- */
 /* 560px screen size */
 /* ---------------------- */
 @media (min-width: 35em) {
@@ -804,6 +814,15 @@ body {
 
     .grid-container--crew > .crew-details > p {
         width: 70%;
+    }
+
+    /* ---------------------- */
+    /* TECHNOLOGY */
+    /* ---------------------- */
+    .technology-numbers {
+        flex-direction: column; 
+        justify-content: center; 
+        align-items: center;
     }
 }
 
