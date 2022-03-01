@@ -17,4 +17,7 @@ Add transparency to header across all pages, add on tab switch on keyboard and m
 02/25/22 - 02/27/22
 Finalize destination page for all devices, continue on crew page. Need to troubleshoot the content.
 
+03/01/22
+Built technology page in mobile. Fix hr line on crew page.
+
 [Live Site](https://nottohave.github.io/space-travel-website-practice/)
