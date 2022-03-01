@@ -497,6 +497,31 @@ body {
     }
 }
 
+/* Technology */
+.technology-background {
+    background-image: url(./assets/technology/background-technology-tablet.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+}
+
+/* 560px */
+@media (min-width: 35em) {
+    .technology-background {
+        background-position: center center;
+        background-image: url(./assets/technology/background-technology-tablet.jpg);
+    }
+}
+
+/* 720px */
+@media (min-width: 60em) {
+    .technology-background {
+        background-image: url(./assets/technology/background-technology-desktop.jpg);
+    }
+}
+
+
 .grid-container {
     text-align: center;
     display: grid;
@@ -620,11 +645,18 @@ body {
 /* ---------------------- */
 /* Technology Mobile */
 /* ---------------------- */
-.grid-container--technology {
 
+.grid-container--technology {
+    row-gap: 0;
+    grid-template-areas:
+        "heading"
+        "planet"
+        "tabs"
+        "bodyContent";
 }
 
 .technology-numbers {
+
 }
 
 /* ---------------------- */
