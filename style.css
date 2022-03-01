@@ -445,12 +445,23 @@ body {
     background-position: bottom center;
 }
 
-/* home */
+/* HOME */
 .home {
     background-image: url(./assets/home/background-home-mobile.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+/* HOME 560px */
+.home {
+    background-image: url(./assets/home/background-home-tablet.jpg);
+}
+
+/* HOME 720px */
+.home {
+    background-image: url(./assets/home/background-home-desktop.jpg);
+}
+
 
 /* DESTINATION */
 .destination-background {
@@ -459,6 +470,7 @@ body {
     background-size: cover;
 }
 
+/* DESTINATION 560px */
 @media (min-width: 35em) {
     .destination-background {
         background-position: center center;
@@ -760,7 +772,23 @@ body {
         grid-area: tabs;
     }
 
+    /* ---------------------- */
+    /* TECHNOLOGY Tablet */
+    /* ---------------------- */    
+    .grid-container--technology {
+        row-gap: 2.5rem;
+    }
 
+    .grid-container--technology > .technology-title {
+        justify-content: start;
+        align-content: start;
+        margin-left: 2.125rem;
+    }
+
+    .technology-details p {
+        max-width: 60ch;
+    }
+    
 }
 
 /* ---------------------- */
@@ -852,7 +880,6 @@ body {
         align-self: start;
     }
 
-
     .grid-container--crew > .crew-member {
         grid-area: image;
         height: 90%;
@@ -880,11 +907,38 @@ body {
     /* ---------------------- */
     /* TECHNOLOGY */
     /* ---------------------- */
-    .technology-numbers {
+    .grid-container--technology {
+        justify-content: start;
+        align-items: flex-start;
+        grid-template-areas: 
+            '. title title .'
+            '. content image .'
+            '. .     .     .'
+    }
+
+    .grid-container--technology > .technology-title {
+        grid-area: title;
+    }
+
+    .grid-container--technology > .technology-numbers {
+        grid-area: content;
         flex-direction: column; 
         justify-content: center; 
         align-items: center;
     }
+
+    .grid-container--technology > .technology-details {
+        grid-area: content;
+    }
+
+    .grid-container--technology > .technology-vehicle {
+        grid-area: image;
+    }
+
+    .technology-vehicle img {
+        display: none;
+    }
+
 }
 
 [role="tab"]:focus {
