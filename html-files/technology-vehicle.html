@@ -15,7 +15,8 @@
   <!-- CSS  -->
   <link rel="stylesheet" href="../style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
-  
+  <script src="../javascript-files/main.js" defer></script>
+
   <title>Frontend Mentor | Space tourism website</title>
 </head>
 <body class="destination-background" style="overflow: scroll; scroll-behavior: smooth;">
@@ -45,37 +46,40 @@
 
   </header>
 
-  <!-- Dots Numbers -->
-  <div class="number-indicators flex" style="height: 15rem; width: 15rem; flex-direction: column; justify-content: center; align-items: center;">
-      <button aria-selected="true" class="ff-serif text-dark bg-white">1</button>
-      <button aria-selected="false" class="ff-serif text-white bg-white">2</button>
-      <button aria-selected="false" class="ff-serif text-white bg-white">3</button>
-  </div>
+  <main id="main" class="grid-container grid-container--technology">
+    <div class="crew-title ff-sans-cond uppercase text-white letter-spacing-2 flex">
+      <span style="opacity: 0.5">03</span> Space launch 101
+    </div>
+
+    <!-- Pictures -->
+    <picture class="crew-member planet flex commander">
+      <source srcset="../assets/technology/image-launch-vehicle-landscape.jpg" type="image/webp">
+      <img src="../assets/technology/image-launch-vehicle-landscape.jpg" alt="image-launch-vehicle-landscape">
+      <hr>    
+    </picture>
+
+    <!-- Dots Numbers -->
+    <div class="technology-numbers number-indicators flex">
+        <button aria-selected="true" class="ff-serif text-dark bg-white">1</button>
+        <button aria-selected="false" class="ff-serif text-white bg-white">2</button>
+        <button aria-selected="false" class="ff-serif text-white bg-white">3</button>
+    </div>
+
+    <!-- ARTICLES -->
+    <!-- Launch Vehicle -->
+    <article class="technology-details">
+      <h1 class="fs-700 ff-serif uppercase text-white"> 
+        <span class="fs-600 ff-serif uppercase text-accent d-block">The terminology...</span> 
+        Launch vehicle</h1>
+      <p class="text-accent">
+        A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a 
+        payload from Earth's surface to space, usually to Earth orbit or beyond. Our 
+        WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, 
+        it's quite an awe-inspiring sight on the launch pad!
+      </p>
+    </article>
 
 
-
-
-
-
-
-
-  00 Home
-  01 Destination
-  02 Crew
-  03 Technology
-
-  03 Space launch 101
-
-  1
-  2
-  3
-
-  The terminology...
-  Launch vehicle
-
-  A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a 
-  payload from Earth's surface to space, usually to Earth orbit or beyond. Our 
-  WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, 
-  it's quite an awe-inspiring sight on the launch pad!
+  </main>
 </body>
 </html>
