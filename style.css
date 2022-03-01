@@ -670,10 +670,22 @@ body {
     padding: 0;
 }
 
-
-
 .technology-numbers {
+    grid-area: tabs;
+}
 
+.technology-details {
+    grid-area: bodyContent;
+    text-align: center;
+    height: 100%;
+}
+
+.technology-details h1 {
+    margin-bottom: 1.2rem;
+}
+
+.technology-details p {
+    max-width: 40ch;
 }
 
 /* ---------------------- */
