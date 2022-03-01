@@ -452,7 +452,7 @@ body {
     background-size: cover;
 }
 
-/* destination */
+/* DESTINATION */
 .destination-background {
     background-image: url(./assets/destination/background-destination-mobile.jpg);
     background-repeat: no-repeat;
@@ -466,14 +466,14 @@ body {
     }
 }
 
-/* 720px */
+/* DESTINATION 720px */
 @media (min-width: 60em) {
     .destination-background {
         background-image: url(./assets/destination/background-destination-desktop.jpg);
     }
 }
 
-/* Crew */
+/* CREW */
 .crew {
     background-image: url(./assets/crew/background-crew-mobile.jpg);
     background-repeat: no-repeat;
@@ -482,31 +482,31 @@ body {
 }
 
 
-/* 560px */
+/* CREW 560px */
 @media (min-width: 35em) {
-    .home {
+    .crew {
         background-position: center center;
-        background-image: url(./assets/home/background-home-tablet.jpg);
+        background-image: url(./assets/crew/background-crew-tablet.jpg);
     }
 }
 
-/* 720px */
+/* CREW 720px */
 @media (min-width: 60em) {
-    .home {
-        background-image: url(./assets/home/background-home-desktop.jpg);
+    .crew {
+        background-image: url(./assets/crew/background-crew-desktop.jpg);
     }
 }
 
-/* Technology */
+/* TECHNOLOGY */
 .technology-background {
-    background-image: url(./assets/technology/background-technology-tablet.jpg);
+    background-image: url(./assets/technology/background-technology-mobile.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
 
 }
 
-/* 560px */
+/* TECHNOLOGY 560px */
 @media (min-width: 35em) {
     .technology-background {
         background-position: center center;
@@ -514,13 +514,12 @@ body {
     }
 }
 
-/* 720px */
+/* TECHNOLOGY 720px */
 @media (min-width: 60em) {
     .technology-background {
         background-image: url(./assets/technology/background-technology-desktop.jpg);
     }
 }
-
 
 .grid-container {
     text-align: center;
@@ -624,7 +623,7 @@ body {
     align-items: center;
 }
 
-.crew > .crew-member > hr {
+.crew-member > hr {
     width: 100%;
     margin: 0; 
 }
@@ -643,9 +642,8 @@ body {
 }
 
 /* ---------------------- */
-/* Technology Mobile */
+/* TECHNOLOGY */
 /* ---------------------- */
-
 .grid-container--technology {
     row-gap: 0;
     grid-template-areas:
@@ -653,7 +651,26 @@ body {
         "planet"
         "tabs"
         "bodyContent";
+    padding-inline: 0rem;
 }
+
+.grid-container--technology > .technology-title {
+    grid-area: heading;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    width: 100%;
+    justify-content: center;
+}
+
+.grid-container--technology > .technology-vehicle {
+    grid-area: planet;
+    align-items: flex-start;
+    justify-items: flex-start;
+    margin: auto;
+    padding: 0;
+}
+
+
 
 .technology-numbers {
 
