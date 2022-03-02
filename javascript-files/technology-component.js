@@ -61,20 +61,30 @@ function clickOnTab(click) {
     // hide all crew information
     for (i = 0; i < articles.length; i++) {
         articles[i].setAttribute("hidden", "true");
+        console.log("article is executed");
+        console.log(articles[i]);
     }
     
     // select all role tab and set aria selected to false
     for (i = 0; i < tab.length; i++) {
         tab[i].setAttribute("aria-selected", "false");
+        console.log("aria-selected is executed");
+        console.log(tab[i]);
+
     }
 
     // hide all pictures
     let picture = document.querySelectorAll('picture');
     for (i = 0; i < picture.length; i++) {
         picture[i].setAttribute("hidden", "true");
+        console.log("picture is executed");
+        console.log(picture[i]);
+
     }
 
     // remove hidden content  and set active to the button upon user click
     mainContainer.querySelector([`#${aria_controls}`]).removeAttribute('hidden');
+    console.log("mainContainer passed, id aria controls passed");
     mainContainer.querySelector([`.${aria_controls}`]).removeAttribute('hidden');
+    console.log("main container class ariacontrols passed");
 }
