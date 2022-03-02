@@ -970,10 +970,9 @@ body {
         line-height: 2rem;
         max-width: 55ch;
     }
-
-
 }
 
 [role="tab"]:focus {
     color: white;
 }
+
