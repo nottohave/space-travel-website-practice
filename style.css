@@ -255,6 +255,15 @@ select {
     transform: scale(1.5);
 }  
 
+[hidden] {
+    display: none;
+}
+
+[role="tab"]:focus {
+    color: white;
+}
+
+
 /* header */
 .logo {
     margin: 1.2rem clamp(2rem, 5vw, 3.44rem);
@@ -549,9 +558,8 @@ body {
 /* ---------------------- */
 /* DESTINATION MOBILE */
 /* ---------------------- */
-[hidden] {
-    display: none;
-}
+
+
 .grid-container--destination {
     gap: 1.5rem;
     grid-template-areas:
@@ -686,11 +694,11 @@ body {
     display: none;
 }
 
-.technology-numbers {
+.grid-container--technology > .technology-numbers {
     grid-area: tabs;
 }
 
-.technology-details {
+.grid-container--technology > .technology-details {
     grid-area: bodyContent;
     text-align: center;
     height: 100%;
@@ -792,7 +800,6 @@ body {
     .technology-details p {
         max-width: 60ch;
     }
-    
 }
 
 /* ---------------------- */
@@ -800,6 +807,7 @@ body {
 /* ---------------------- */
 
 @media (min-width: 60em) {
+    
     .grid-container {
         text-align: left;
         column-gap: var(--container-gap, 2rem);
@@ -911,6 +919,11 @@ body {
     /* ---------------------- */
     /* TECHNOLOGY desktop */
     /* ---------------------- */
+
+    .grid-container--technology > [hidden] {
+        display: none !important; 
+    }
+
     .grid-container--technology {
         text-align: left;
         column-gap: var(--container-gap, 0rem);
@@ -921,7 +934,7 @@ body {
         grid-template-areas: 
             '. title title title3 .'
             '. tabs content image .'
-            '. .     .  .   .'
+            '.  .      .       .   .';
     }
 
     .grid-container--technology > .technology-title {
@@ -970,9 +983,5 @@ body {
         line-height: 2rem;
         max-width: 55ch;
     }
-}
-
-[role="tab"]:focus {
-    color: white;
 }
 
