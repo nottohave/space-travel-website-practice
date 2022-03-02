@@ -16,6 +16,8 @@
   <link rel="stylesheet" href="../style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
   <script src="../javascript-files/main.js" defer></script>
+  <script src="../javascript-files/technology-component.js" defer></script>
+
 
   <title>Frontend Mentor | Space tourism website</title>
 </head>
@@ -39,7 +41,7 @@
               <span aria-hidden="true">01</span>Destination</a></li>
           <li ><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="./crew-commander.html">
               <span aria-hidden="true">02</span>Crew</a></li>
-          <li ><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="./technology-vehicle.html">
+          <li ><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="./technology.html">
               <span aria-hidden="true">03</span>Technology</a></li>
       </ul>
     </nav>
@@ -52,21 +54,37 @@
     </div>
 
     <!-- Pictures -->
-    <picture class="technology_vehicle planet flex">
+    <picture class="technology_vehicle planet flex vehicle">
       <img class="vehicle-mobile" src="../assets/technology/image-launch-vehicle-landscape.jpg" alt="image-launch-vehicle-landscape">    
       <img class="vehicle-desktop" src="../assets/technology/image-launch-vehicle-portrait.jpg" alt="image-launch-vehicle-portrait">
     </picture>
 
+    <picture hidden class="technology_vehicle planet flex spaceport">
+      <img class="vehicle-mobile" src="../assets/technology/image-spaceport-landscape.jpg" alt="image-launch-vehicle-landscape">    
+      <img class="vehicle-desktop" src="../assets/technology/image-spaceport-portrait.jpg" alt="image-launch-vehicle-portrait">
+    </picture>
+
+    <picture hidden class="technology_vehicle planet flex capsule">
+      <img class="vehicle-mobile" src="../assets/technology/image-space-capsule-landscape.jpg" alt="image-launch-vehicle-landscape">    
+      <img class="vehicle-desktop" src="../assets/technology/image-space-capsule-portrait.jpg" alt="image-launch-vehicle-portrait">
+    </picture>
+
     <!-- Dots Numbers -->
-    <div class="technology-numbers number-indicators flex">
-        <button aria-selected="true" role="tab" tabindex="0" class="ff-serif text-dark bg-white">1</button>
-        <button aria-selected="false" role="tab" tabindex="0" class="ff-serif text-white bg-white">2</button>
-        <button aria-selected="false" role="tab" tabindex="0" class="ff-serif text-white bg-white">3</button>
+    <div class="technology-numbers number-indicators flex" role="tablist">
+        <button aria-selected="true" role="tab" tabindex="0" aria-controls="vehicle" class="ff-serif text-dark bg-white">
+          1
+        </button>
+        <button aria-selected="false" role="tab" tabindex="0" aria-controls="spaceport" class="ff-serif text-white bg-white">
+          2
+        </button>
+        <button aria-selected="false" role="tab" tabindex="0" aria-controls="capsule" class="ff-serif text-white bg-white">
+          3
+        </button>
     </div>
 
     <!-- ARTICLES -->
     <!-- Launch Vehicle -->
-    <article class="technology-details">
+    <article class="technology-details" id="vehicle">
       <h1 class="fs-700 ff-serif uppercase text-white"> 
         <span class="fs-600 ff-serif uppercase text-accent d-block">The terminology...</span> 
         Launch vehicle</h1>
@@ -79,7 +97,7 @@
     </article>
 
     <!-- SPACEPORT -->
-    <article class="technology-details">
+    <article hidden class="technology-details" id="spaceport">
       <h1 class="fs-700 ff-serif uppercase text-white"> 
         <span class="fs-600 ff-serif uppercase text-accent d-block">The terminology...</span> 
         Spaceport</h1>
@@ -92,7 +110,7 @@
     </article>
 
     <!-- SPACE CAPSULE -->
-    <article class="technology-details">
+    <article hidden class="technology-details" id="capsule">
       <h1 class="fs-700 ff-serif uppercase text-white"> 
         <span class="fs-600 ff-serif uppercase text-accent d-block">The terminology...</span> 
         Space capsule</h1>
