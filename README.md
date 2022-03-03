@@ -16,6 +16,7 @@ This is a solution to the [Space tourism website challenge on Frontend Mentor](h
   - [Useful resources](#useful-resources)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
+- [Progress Blog](#ProgressBlog)
 
 ## Overview
 
@@ -32,12 +33,7 @@ Users should be able to:
 
 ![](./preview.jpg)
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
+Preview Shot
 
 ### Links
 
@@ -100,7 +96,7 @@ Need to get better on using animation keyframe to make the website more interact
 Credit for awesome design files go to Frontendmentor.
 Credit for Kevin Powell create amazing tutorial to follow through [Scrimba Tutorial](https://scrimba.com/learn/spacetravel).
 
-# Space tourism website Progress Blog
+## Progress Blog
 
 01/31/22 - 02/13/22
 Project initialized, following tutorial and self practice building main and moon page 
@@ -123,6 +119,4 @@ Finalize destination page for all devices, continue on crew page. Need to troubl
 Built technology page in mobile. Fix hr line on crew page.
 
 03/02/22
-Finish building technology page in desktop mode. Add on small animations for the home page.
-
-[Live Site](https://nottohave.github.io/space-travel-website-practice/)
+Finish building technology page in desktop mode. Add on small animations for the home page. Futher bug fix will be next coming date.
