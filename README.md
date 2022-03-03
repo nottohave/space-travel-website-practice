@@ -20,4 +20,7 @@ Finalize destination page for all devices, continue on crew page. Need to troubl
 03/01/22
 Built technology page in mobile. Fix hr line on crew page.
 
+03/02/22
+Finish building technology page in desktop mode. Add on small animations for the home page.
+
 [Live Site](https://nottohave.github.io/space-travel-website-practice/)
