@@ -54,23 +54,38 @@ Preview Shot
 
 ### What I learned
 
-I learnt analyzing the design structure following the tutorial. Built components, messed around with media queries, learnt grid, use [role=tab] in dom manipulation, declare variables in CSS Class, change and update CSS variables as I continue building the destination, crew and technology page. Plug and play with components to see what desiable for the experience.
+I learnt analyzing the design structure following the tutorial. Built components, messed around with media queries, learnt grid, aspect-ratio (ratio of width / height of the object), use [role=tab] in dom manipulation, declare variables in CSS Class, change and update CSS variables as I continue building the destination, crew and technology page. Plug and play with components to see what desiable for the experience.
 I learnt a bit on using animation keyframe in components then apply it on areas on the webpage. 
 
 To see how you can add code snippets, see below:
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
+<nav>
+    <ul id="primary-navigation" data-visible="false" class="primary-navigation underline-indicators flex" >
+        <li ><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="./index.html">
+            <span aria-hidden="true">00</span>Home</a></li>
+        <li ><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="./html-files/destination.html">
+            <span aria-hidden="true">01</span>Destination</a></li>
+        <li ><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="./html-files/crew-commander.html">
+            <span aria-hidden="true">02</span>Crew</a></li>
+        <li ><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="./html-files/technology.html">
+            <span aria-hidden="true">03</span>Technology</a></li>
+    </ul>
+</nav>
 ```
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+.some-class-example {
+    inset: 0 0 0 20%;
+    aspect-ratio: 1;
+    justify-self: start;
+    align-content: start;
 }
+
 ```
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+const tabList = document.querySelector('[role="tablist"]');
+const tab = tabList.querySelectorAll('[role="tab"]');
+
 ```
 
 
