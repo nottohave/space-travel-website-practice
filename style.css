@@ -291,7 +291,15 @@ select {
     transition: all 3s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
+/* CREW */
+.crew-animation--title {
+    animation: top-down 900ms ease-in;
+}
 
+/* TECHNOLOGY */
+.technology-animation--title {
+    animation: left-right 500ms ease-in-out;
+}
 
 @keyframes top-down {
     0% {
