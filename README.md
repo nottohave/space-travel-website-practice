@@ -97,8 +97,10 @@ Need to get better on using animation keyframe to make the website more interact
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Scrimba Tutorial](https://scrimba.com/learn/spacetravel) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
+- [Challenge Page](https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Slack-Community](https://www.frontendmentor.io/slack) - Slack community from Frontendmentor. There are a lot of nice people here.
+- [keyframe-animation-tutorial](https://youtu.be/YszONjKpgg4) - credit to Web Dev Simplified for animation reference. I just need to make simple animation.
 
 
 ## Author
