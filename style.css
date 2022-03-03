@@ -402,6 +402,7 @@ select {
 .underline-indicators > *:focus {
     color: hsl( var(--clr-white) / 1);
     border-color: hsl( var(--clr-white) / 1 );
+
 }
 
 .tab-list {
@@ -421,6 +422,7 @@ select {
     background-color: hsl( var(--clr-white) / .5);
 }
 
+.dot-indicators > .active,
 .dot-indicators > [aria-selected="true"],
 .dot-indicators > *:focus {
     background-color: hsl( var(--clr-white) / 1 );
@@ -440,10 +442,17 @@ select {
     font-size: 1.5rem;
 }
 
+.number-indicators > *:hover {
+    background-color: hsl( var(--clr-white)  / 0.5 );
 
-.number-indicators > [aria-selected="true"] {
+}
+
+.number-indicators > [aria-selected="true"],
+.number-indicators > *:focus {
+    color:hsl( var(--clr-dark) );
     background-color: hsl( var(--clr-white) / 1 );
 }
+
 
 /* 
     Page Specific Background
@@ -974,6 +983,10 @@ body {
         justify-content: center;
         align-items: center;
     } 
+
+    .technology-details h1 {
+        width: 100%;
+    }
 
     .technology-details h1 span {
         font-size: 1rem;
