@@ -37,7 +37,7 @@ Preview Shot
 
 ### Links
 
-- Solution URL: [SOLUTION](https://your-solution-url.com)
+- Solution URL: [SOLUTION](https://www.frontendmentor.io/solutions/space-tourism-website-solution-flex-grid-components-js-dom-oZq1miNor)
 - Live Site URL: [LIVE SITE](https://nottohave.github.io/space-travel-website-practice/)
 
 ## My process
@@ -108,7 +108,7 @@ Need to get better on using animation keyframe to make the website more interact
 - Twitter - [@Ubering_Cacti](https://twitter.com/Ubering_Cacti)
 
 ## Acknowledgments
-Credit for awesome design files go to Frontendmentor.
+Credit for awesome design and challenge files go to Frontendmentor.
 Credit for Kevin Powell create amazing tutorial to follow through [Scrimba Tutorial](https://scrimba.com/learn/spacetravel).
 
 ## Progress Blog
