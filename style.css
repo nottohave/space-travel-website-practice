@@ -30,7 +30,7 @@
         --fs-800: 5rem;
         --fs-700: 2.5rem;
         --fs-600: 1.5rem;
-        --fs-500: 1.25rem
+        --fs-500: 1.25rem;
         --fs-400: 1rem;
     }
 }
@@ -41,7 +41,6 @@
         --fs-800: 6.25rem;
         --fs-700: 3.5rem;
         --fs-600: 2rem;
-        /* --fs-400: 1.125rem; */
     }
 } 
 
@@ -263,6 +262,67 @@ select {
     color: white;
 }
 
+/* Animate */
+/* HOME */
+.home-animation--title {
+    animation: top-down 500ms ease-in-out;
+}
+
+.home-animation--span {
+    animation: top-down 700ms ease-in;
+}
+
+.home-animation--p {
+    animation: top-down 900ms ease-in;
+}
+
+/* DESTINATION */
+.destinaiton-animation--planet {
+    transform: translateY(0) scale(1);
+    transition: all 3s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.destinaiton-animation--tablist {
+    animation: down-top 900ms ease-in;
+}
+
+.destinaiton-animation--content {
+    transform: translateY(0) scale(1);
+    transition: all 3s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+
+
+@keyframes top-down {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes left-right {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes down-top {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
 
 /* header */
 .logo {
@@ -402,7 +462,6 @@ select {
 .underline-indicators > *:focus {
     color: hsl( var(--clr-white) / 1);
     border-color: hsl( var(--clr-white) / 1 );
-
 }
 
 .tab-list {
@@ -567,8 +626,6 @@ body {
 /* ---------------------- */
 /* DESTINATION MOBILE */
 /* ---------------------- */
-
-
 .grid-container--destination {
     gap: 1.5rem;
     grid-template-areas:
@@ -725,6 +782,17 @@ body {
 /* 560px screen size */
 /* ---------------------- */
 @media (min-width: 35em) {
+
+    /* ---------------------- */
+    /* HOME Tablet */
+    /* ---------------------- */
+    .home-content > h1 {
+        font-size: var(--fs-750);
+    }
+
+    .home-content > p {
+        font-size: 1.125rem;
+    }
 
     /* ---------------------- */
     /* DESTINATION Tablet */
@@ -994,7 +1062,6 @@ body {
 
     .technology-details p {
         line-height: 2rem;
-        max-width: 55ch;
     }
 }
 
