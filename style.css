@@ -350,8 +350,8 @@ select {
     list-style: none;
     padding: 0;
     margin: 0;
-    background: hsl( var(--clr-white)  / 0.05 );
-    backdrop-filter: blur(3rem);
+    background: hsl( var(--clr-white)  / 0.05 ); 
+    backdrop-filter: blur(3rem); 
     -webkit-backdrop-filter: blur(4rem);
 }
 
@@ -368,13 +368,14 @@ select {
     display: none;
 }
 
-/* support blur menu glass morphism */
-@supports (backdrop-filter: blur(1rem)) {
+/* blur menu glass morphism - for Firefox fall back, 
+however, it does not work. Firefox need a better update to address this issue */
+/* @supports (backdrop-filter: blur(04rem)) {
     .primary-navigation {
-        background: hsl( var(--clr-white) / .05);
-        backdrop-filter: blur(1.5rem);
+        background: hsl( var(--clr-white)  / 0.05 );
+        backdrop-filter: 1rem;
     }
-}
+} */
 
 @media (max-width: 35rem) {
     .primary-navigation {
@@ -386,7 +387,6 @@ select {
         inset: 0 0 0 20%;
         z-index: 1000;
         padding: min(20rem, 15vh) 2rem;
-        background: #979797;
         transform: translateX(100%);
         transition: 0.5s;
     }
