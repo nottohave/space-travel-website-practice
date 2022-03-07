@@ -97,10 +97,15 @@ Need to get better on using animation keyframe to make the website more interact
 
 ### Useful resources
 
-- [Scrimba Tutorial](https://scrimba.com/learn/spacetravel) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Challenge Page](https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Scrimba Tutorial](https://scrimba.com/learn/spacetravel) - This tutorial helped me on constructing the architect of the website. It gives me the understanding of building components then apply it on my websites. The purpose of building out components is to reduce the amount of repeated codes across the websites. It is also versatile to update the style. 
+
+I appreciate the tutorial on giving me the chance to use the explained concept and applied to building. It is not a full walkthrough. You have to understand the concept, build it along Kevin Powell and then build it yourself.
+
+- [Challenge Page](https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3) - Space travel website challenge where you can sign up and find the challenge template.
+
 - [Slack-Community](https://www.frontendmentor.io/slack) - Slack community from Frontendmentor. There are a lot of nice people here.
-- [keyframe-animation-tutorial](https://youtu.be/YszONjKpgg4) - credit to Web Dev Simplified for animation reference. I just need to make simple animation.
+
+- [keyframe-animation-tutorial](https://youtu.be/YszONjKpgg4) - credit to Web Dev Simplified for animation reference. I use it to make simple animation on text sliding top to bottom, left to right, bottom to top.
 
 
 ## Author
