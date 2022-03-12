@@ -201,8 +201,6 @@ select {
     line-height: 1.1;
 }
 
-
-
 /* set font and color for the numbers, then do the same for the text */
 .numbered-title {
     font-family: var(--ff-sans-cond);
@@ -262,7 +260,7 @@ select {
     color: white;
 }
 
-/* Animate */
+/* Animate Part */
 /* HOME */
 .home-animation--title {
     animation: top-down 500ms ease-in-out;
